@@ -1,10 +1,9 @@
 import type { NextPage } from 'next'
-import Header from '../src/components/Header'
 
 
 const Home: NextPage = () => {
   return (
-    <Header />
+    <header className='bg-[#c9d7f8]'></header>
   )
 }
 
