@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, { useEffect } from 'react'
 import Footer from '../../src/components/Footer'
 import Header from '../../src/components/Header'
 
@@ -9,21 +9,21 @@ import Image from 'next/image'
 function About() {
 
   useEffect(() => {
+
     var i = 0;
     var tag = document.getElementById("text");
-    var html = document.getElementById("text")!.innerHTML;
-    var attr = tag!.setAttribute("data", html);
-    var txt = tag!.getAttribute("data");
-    var speed = 60;
+    if (tag === null)
+    var html = document.getElementById("text").innerHTML;
+    var txt = tag.getAttribute("data");
+    var speed = 170;
 
     function typeWriter() {
-      if (i <= txt!.length) {
-        document.getElementById("text")!.innerHTML = txt!.slice(0 , i + 1);
+      if (i <= txt.length) {
+        document.getElementById("text").innerHTML = txt.slice(0 , i + 1);
         i++;
         setTimeout(typeWriter, speed);
       }
     }
-
     typeWriter();
   }, []);
 

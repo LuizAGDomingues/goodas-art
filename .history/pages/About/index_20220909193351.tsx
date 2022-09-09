@@ -14,7 +14,7 @@ function About() {
     var html = document.getElementById("text")!.innerHTML;
     var attr = tag!.setAttribute("data", html);
     var txt = tag!.getAttribute("data");
-    var speed = 60;
+    var speed = 170;
 
     function typeWriter() {
       if (i <= txt!.length) {

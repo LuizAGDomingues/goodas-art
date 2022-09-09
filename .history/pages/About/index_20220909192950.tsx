@@ -9,22 +9,16 @@ import Image from 'next/image'
 function About() {
 
   useEffect(() => {
-    var i = 0;
-    var tag = document.getElementById("text");
-    var html = document.getElementById("text")!.innerHTML;
-    var attr = tag!.setAttribute("data", html);
-    var txt = tag!.getAttribute("data");
-    var speed = 60;
+    if (document.getElementById('text') === null){
+      console.log('É nulo');
+    } else {
+      console.log('Não é nulo');
+      const tag = document.getElementById('text');
+      const html = document.getElementById('text')?.innerHTML;
+      const attr = tag?.setAttribute('data', html);
+      const txt = tag?.getAttribute(data)
 
-    function typeWriter() {
-      if (i <= txt!.length) {
-        document.getElementById("text")!.innerHTML = txt!.slice(0 , i + 1);
-        i++;
-        setTimeout(typeWriter, speed);
-      }
     }
-
-    typeWriter();
   }, []);
 
   return (

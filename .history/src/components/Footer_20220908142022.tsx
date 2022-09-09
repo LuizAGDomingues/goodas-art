@@ -4,7 +4,7 @@ import React from 'react'
 function Footer() {
   return (
     <div className='bg-black text-white font-Nunito'>
-        <div className='flex justify-between items-center text-center'>
+        <div className='flex justify-between items-center text-c'>
           <ul className='grid ml-60'>
             <Link href='/'>Artigos em couro</Link>
             <Link href='/'>Restauração de imagens</Link>
